@@ -1,0 +1,18 @@
+body{
+   --primary-heading-color:#111111;
+    --secendary-heading-color:#13e7d2;
+
+    --dark-text-color:#1f1f1f;
+    --light-text-color:#ffffff;
+   
+    
+    --light-bg-color:#ffffff;
+    --drak-bg-color:#111111;
+     --header-bg-color : radial-gradient(#d4d9db , #d5dade);
+     --header-effect-color :#cdcdcd;
+     
+    --primary-brand-color:#13e7d2;
+    --secendary-brand-color:#13e7d2;
+
+    
+}

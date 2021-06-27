@@ -1,0 +1,301 @@
+@import "global-style.css";
+@import "color-variable.css";
+/*--navbar--start--*/
+.navbar{
+    position: fixed;
+    width: 100%;
+    padding-top:2rem;
+    padding-bottom: 2rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03);
+    z-index: 100;
+    
+}
+/*--logo-brand--*/
+.branding-logo{
+    font-size: 2.2rem;
+    color: var(--primary-heading-color);
+    font-family:'Poppins', sans-serif ;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+/*--nav items--*/
+.nav{
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+
+.nav-menu{
+    display: flex;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+}
+
+
+.nav-items{
+    margin-left: 1.5rem;
+    margin-right: 1.5arem;
+    color: var(--primary-brand-color) ;
+    font-size: 1.4rem;
+}
+
+.nav-links {
+    display: block;
+    position: relative;
+    font-family:var(--content-font);
+    height: 2rem;
+    font-size: 1.3rem;
+    color: var(--primary-heading-color);
+    transition: all 300ms ease;
+}
+
+
+.nav-links:hover{
+    color:var(--primary-brand-color);
+}
+
+.nav-links::before{
+    content: "";
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    background-color:var(--primary-brand-color);
+    bottom: 0;
+    transform: scaleX(0);
+    transition: all 300ms ease;    
+}
+
+
+
+.nav-links:hover::before{
+    transform: scaleX(1);
+}
+
+/*--social-icoins--*/
+.social-manu{
+    display: flex;
+}
+
+
+.icoin-items{
+    margin-left: 0.6rem;
+    margin-right: 0.6rem;
+    font-size: 1.2rem;
+    
+    
+}
+
+.social-links{
+    display: block;
+    height: 2rem;
+    width: 2rem;
+    background-color:var( --primary-brand-color);
+    border-radius : 50%;
+    line-height : 2.2rem;
+    text-align : center;
+    color:var(--light-text-color);
+
+}
+
+.social-links:hover{
+    background-color:var(--secendery-heading-color);
+    color:var(--primary-heading-color);
+}
+
+/*--toggle-bar--*/
+
+.toggle-bar{
+    display: none;
+    width: 2rem;
+    height: 2.2rem;
+    align-items: center;
+    justify-content: center;
+    border: 1.5px solid var(--primary-heading-color);
+    border-radius: 5px;
+}
+
+
+.close {
+    font-size: 2rem;  
+    
+    
+}
+.open{
+   transform: rotate(45deg); 
+   font-size: 2rem;
+   display: none;
+}
+
+.header-section{
+    overflow: hidden;
+    min-height: 100vh;
+    background: var(--header-bg-color );
+    border-bottom-left-radius: 55%  20%;
+    border-bottom-right-radius: 55% 20%;
+    position: relative;
+}
+
+.header-section::before{
+    content: "SJ";
+    position: absolute;
+    top:0;
+    right:-1.5rem;
+    font-size: 50rem;
+    line-height:533px;
+    letter-spacing:-4rem ;
+    color: var(--dark-text-color);
+    opacity: 0.08;
+    font-family:'Lato', sans-serif ;
+
+}
+
+
+
+
+.image-block{
+    width: 100%;
+    height: calc(100vh - 5rem );
+    object-position:top;
+    object-fit: cover ;
+    margin-top: 7.5rem;
+    opacity: 1;
+}
+
+
+.hero-block{
+    align-items: center;
+}
+
+
+.text-title{
+    font-size: 3.5rem;
+    line-height: 4.4rem;
+    margin-bottom: 1.2rem;
+    font-family: var(--header-font);
+
+}
+
+.text-block{
+    z-index: 90;
+}
+
+
+.hero-data{
+    padding: var(--section-padding);
+}
+
+.content-text{
+    font-family:var(--content-font);
+    font-size: 1.09rem;
+    line-height: 1.6rem;
+    
+}
+
+
+
+/*--media Screen--*/
+
+@media (max-width: 991.98px) {
+    .container{
+        padding: 0px 25px;
+        overflow: hidden;
+    }
+    .flex-box{
+        flex-wrap: wrap;
+    }
+    .navbar{
+        height: auto;
+    }
+    .nav-menu{
+        width: 100%;
+        top: 0;
+        left: 0;
+        position: relative;
+        transform: none;
+        display:none;
+        text-align: center;  
+    }
+    .nav-items{
+        padding: 10px 0px;
+    }
+   .social-manu{
+        width: 100%;
+        padding-top: 25px;
+        display: none;
+        
+    }
+    .toggle-bar{
+        display: flex;
+    }
+    #toggle-bar:checked ~ .nav-menu{
+        display: block;
+    }
+    #toggle-bar:checked ~ .social-manu{
+        display: flex;
+        justify-content: center;
+        margin-left: 20px;
+    }
+    #toggle-bar:checked ~ .toggle-bar .open{
+       display: block; 
+    }
+    #toggle-bar:checked ~ .toggle-bar .close{
+        display:none;  
+     }
+
+}
+/* // X-Large devices (large desktops, less than 1400px) */ 
+@media (max-width: 1399.98px) {
+
+
+}
+
+
+  /* // Large devices (desktops, less than 1200px) */
+  @media (max-width: 1199.98px) {
+    .text-title {
+        font-size: 2.8rem;
+        line-height: 3.5rem;
+    }
+
+}
+
+/* // Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+    .text-title {
+        font-size: 2.5rem;
+        line-height: 3.5rem;
+    }
+
+
+    .hero-block{
+        flex-direction: column-reverse;
+    }  
+
+    .hero-block .half-block{
+        width: 100%;
+        flex-basis: 100%;
+        /* margin-top: 7.5rem; */
+        text-align: center;
+    }
+
+
+    .hero-data{
+        margin-top: 7.5rem;
+    }
+    .image-block{
+        margin-top: 1rem;
+    }
+ }
+
+   /* // Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+
+}
+ /* // X-Small devices (portrait phones, less than 576px) */
+ @media (max-width: 575.98px) {
+
+ }
+
